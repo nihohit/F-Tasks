@@ -1,5 +1,9 @@
 // assumes that `comparer` takes 2 values of type 'a and returns 1 if the first is larger than the 
 // second, -1 if the second is larger than the first, and 0 if they're equal.
+// This uses quicksort, as stated bin task1.fsi, has a high worst-case complexity, but is usually good enough.
+// while performance can be improved by not sorting the larger array once the lowest k items were found, but it's late
+// and I'm too tired to optimize. ¯\_(ツ)_/¯
+// It wasn't clear from the task what's the signature of the comparer, so I wasn't sure whether I can use List.sortBy.
 let rec sorter (ls :'a list) comparer =
     let rec auxiliarySorter pivot internalList smaller larger equal =
         match internalList with

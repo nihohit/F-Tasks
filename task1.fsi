@@ -12,7 +12,9 @@ let comp (nut: Nut) (bolt: Bolt) : int =
     else 
         0
 
-// Wpent too long trying to understand how to combine generics with a discriminated union, so decided to just write twice. SAD :(
+// Spent too long trying to understand how to combine generics with a discriminated union, so decided to just write twice. SAD :(\
+// This uses quicksort which has an average complexity of O(nlogn), but worst case of O(n^2). I was too busy trying to handle the new language
+// to implement mergesort. sorry ¯\_(ツ)_/¯
 let nutSorter (ls :Nut list) (pivot :Bolt) =
     let rec auxiliarySorter internalList smaller larger equal =
         match internalList with
